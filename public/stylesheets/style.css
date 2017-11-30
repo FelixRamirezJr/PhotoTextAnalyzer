@@ -1,8 +1,14 @@
+body{
+  background-color: #5e35b1;
+}
 #camera{
   width: 100%;
   height: 100%;
   background-color: #5e35b1;
+  border: none;
 }
+#camera:focus { outline: none; }
+
 
 i{
   color: white;
