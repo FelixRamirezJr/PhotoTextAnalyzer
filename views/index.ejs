@@ -3,8 +3,21 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/6dada7126a.js"></script>
   </head>
   <body>
-    <input type="file" name="image" accept="image/*" capture="environment">
+    <button id="camera"> <i class="fa fa-camera"> </i> </button>
+    <input style="display: none;" type="file" name="image" accept="image/*" capture="environment" id="picture-upload">
   </body>
 </html>
+
+<script>
+  $(document).ready(function(){
+    $("#camera").css('height', $( window ).height() - 50 );
+    $(".fa-camera").css('font-size', $( window ).height() / 4);
+  });
+  $("#camera").click(function(){
+    $("#picture-upload").click();
+  });
+</script>
