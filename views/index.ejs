@@ -21,4 +21,10 @@
   $("#camera").click(function(){
     $("#picture-upload").click();
   });
+  $("#picture-upload").change(function(){
+    var cc = prompt("How much?");
+    if (cc != null) {
+      alert("Thank you!");
+    }
+  });
 </script>
