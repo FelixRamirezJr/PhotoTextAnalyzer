@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var g_key = process.env.G_API_KEY;
+  res.render('index', { g_api_key: g_key });
 });
 
 module.exports = router;
